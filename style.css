@@ -1,3 +1,11 @@
-.dody{
-    background-color: blue;
+body{
+    background-color:white;
+}
+h1{
+    font-family:Impact, Haettenschweiler,sans-serif;
+    font-size: 65px;
+    text-align: center;
+    margin-top: auto;
+
+
 }
