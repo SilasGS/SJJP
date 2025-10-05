@@ -46,7 +46,7 @@ p{
 
 /* Caixa branca translúcida */
 .overlay-box {
-  background: rgba(240, 240, 240, 0.658); /* cor + transparência */
+  background: rgba(197, 196, 196, 0.774); /* cor + transparência */
   border-radius: 20px;
   text-align: center;
   max-width: 600px;
