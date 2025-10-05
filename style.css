@@ -5,5 +5,12 @@ h1{
     font-family:Impact, Haettenschweiler,sans-serif;
     font-size: 65px;
     text-align: center;
-    margin-top: auto;
+    margin-top: 150px;
+}
+
+.im{
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: auto;
 }
