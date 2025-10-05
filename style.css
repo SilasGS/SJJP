@@ -14,3 +14,32 @@ h1{
     width: 200px;
     height: auto;
 }
+
+/* ====== HERO SECTION ====== */
+.hero {
+  background: url('fundo.jpg') center center/cover no-repeat;
+  height: -2vh; /* altura total da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa branca translúcida */
+.overlay-box {
+  background: rgba(255, 255, 255, 0.85); /* cor + transparência */
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.overlay-box p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Ajuste de layout do restante da página */
+section {
+  padding: 100px 60px;
+}
