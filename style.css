@@ -34,6 +34,12 @@ p{
 
 .texto_centralizado{
     text-align: center;
+
+}
+
+.tamanho_font{
+    font-family: Roboto, sans-serif;
+    font-size: 1.5em;
 }
 
 /* ====== HERO SECTION ====== */
@@ -67,12 +73,12 @@ section {
 
 .fa-instagram {
   color: #E4405F; /* cor oficial do Instagram */
-  font-size: 24px;
-  margin-right: 5px;
+  font-size: 60px;
+  margin-right: 30px;
 }
 
 .fa-whatsapp{
   color: #25d366;
-  font-size: 24px;
-  margin-right: 5px;
+  font-size: 60px;
+  margin-right: 30px;
 }
