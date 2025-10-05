@@ -3,14 +3,18 @@ body{
 }
 h1{
     font-family:Impact, Haettenschweiler,sans-serif;
-    font-size: 65px;
+    font-size: 3.5rem;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 4rem;
 }
 
 .im{
     display: block;
-    margin: 20px auto;
-    width: 200px;
+    margin: -0.5rem auto;
+    width: 24rem;
     height: auto;
+}
+
+.texto_centralizado{
+    text-align: center;
 }
