@@ -18,6 +18,9 @@ p{
     font-family: Roboto, sans-serif;
     font-size: 1.2em;
 }
+.espacamento_palavras{
+    word-spacing: 20px;
+}
 
 .im{
     display: block;
@@ -60,3 +63,15 @@ section {
   padding: 10px 5px;
 }
 
+
+.fa-instagram {
+  color: #E4405F; /* cor oficial do Instagram */
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.fa-whatsapp{
+  color: #25d366;
+  font-size: 24px;
+  margin-right: 5px;
+}
