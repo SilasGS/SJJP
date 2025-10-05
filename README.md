@@ -1,2 +1,2 @@
-# Jovens-Panorama
-site do grupo de jovens do panorama
+# Comunicação
+site para Informação e Comunicação da IASD Jardim Panorama
