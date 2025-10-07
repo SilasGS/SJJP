@@ -31,29 +31,32 @@ p{
     border-radius: 15px;
 }
 
-/*confi das fotos em slides*/
-.galeria {
-  padding: 80px;
+/*config das fotos em slides*/
+.galeria::-webkit-scrollbar 
+.slider::-webkit-scrollbar{
+  padding:3rem;
   background: #99928c;
+  display: none;
 }
 
 .slider {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 15px;
-  padding: 20px;
+  gap: 30rem;
+  padding: 3rem;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch; /* melhora no celular */
 }
 
 
 .slider img {
-  width: 25rem; /* ajuste conforme preferir */
-  height: auto;
+  width: 100%; /* ajuste conforme preferir */
+  height:80vh;
+  background-size: cover;
   flex-shrink:0;
   scroll-snap-align: center;
-  border-radius: 12px;
+  border-radius: 1rem;
 }
 
 .texto_centralizado{
@@ -145,13 +148,53 @@ section {
 .menu a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
+    margin-left: 5rem;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .menu a:hover {
     color: #ffcc00;
+}
+
+/* Ícone do menu (hambúrguer) */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .topo {
+    padding: 1rem 2rem;
+  }
+
+  .menu {
+    display: none; /* esconde o menu normal */
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .menu a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .menu.ativo {
+    display: flex; /* mostra o menu quando ativo */
+  }
+
+  .menu-icon {
+    display: block; /* mostra o ícone no celular */
+  }
 }
 
 /* Adiciona espaço no corpo pra não ficar escondido atrás do header*/
