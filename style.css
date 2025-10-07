@@ -31,10 +31,10 @@ p{
     border-radius: 15px;
 }
 
-
+/*confi das fotos em slides*/
 .galeria {
   padding: 80px;
-  background: #ca6e1d;
+  background: #99928c;
 }
 
 .slider {
@@ -46,7 +46,6 @@ p{
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch; /* melhora no celular */
 }
-
 
 
 .slider img {
@@ -66,6 +65,8 @@ p{
     font-family: Roboto, sans-serif;
     font-size: 1.5em;
 }
+
+
 
 /* ====== HERO SECTION ====== */
 .hero {
@@ -107,4 +108,53 @@ section {
   color: #25d366;
   font-size: 60px;
   margin-right: 30px;
+}
+
+
+
+/* config da barra do topo  */
+.topo {
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem; /* diminui padding lateral */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* config do Logo */
+.topo .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    gap: 10px; /* espaço entre texto e imagem */
+}
+
+.logo img {
+    height: 2.2rem;
+    width: auto;
+}
+
+/* config do Menu */
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ffcc00;
+}
+
+/* Adiciona espaço no corpo pra não ficar escondido atrás do header*/
+body {
+    padding-top: 100px; /* altura equivalente à barra */
 }
