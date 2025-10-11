@@ -51,9 +51,10 @@ p{
 
 
 .slider img {
-  width: 100%; /* ajuste conforme preferir */
-  height:80vh;
+  width: 50%; /* ajuste conforme preferir */
+  height: auto;
   background-size: cover;
+  background-position: center;
   flex-shrink:0;
   scroll-snap-align: center;
   border-radius: 1rem;
@@ -71,18 +72,18 @@ p{
 
 
 
-/* ====== HERO SECTION ====== */
+/* ====== HERO SECTION ====== 
 .hero {
   background: url('fundo.jpg') center center/cover no-repeat;
-  height: -2vh; /* altura total da tela */
+  height: -2vh; /* altura total da tela 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Caixa branca translúcida */
+/* Caixa branca translúcida 
 .overlay-box {
-  background: rgba(197, 196, 196, 0.774); /* cor + transparência */
+  background: rgba(197, 196, 196, 0.774); /* cor + transparência 
   border-radius: 30px;
   text-align: center;
   max-width: 650px;
@@ -93,7 +94,7 @@ p{
 .overlay-box p {
   color: #555;
   line-height: 1.6;
-}
+} */
 
 /* Ajuste de layout do restante da página */
 section {
