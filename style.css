@@ -1,129 +1,13 @@
-body{
-    background-repeat: repeat;
-    background-size: 60rem;
-    background-position: center;
-}
-h1{
-    font-family:'Varela Round', sans-serif;
-    font-size: 3.5rem;
-    text-align: center;
-    margin-top: 10rem;
-}
-h2{
-    font-family: Poppins, sans-serif;
-    font-size: 2em;
-}
-p{
-    font-family: Roboto, sans-serif;
-    font-size: 1.2rem;
-}
-.espacamento_palavras{
-    word-spacing: 20px;
-    font-size: 1.1em;
-}
-
-.im{
-    display: block;
-    margin: -0.5rem auto;
-    width: 24rem;
-    height: auto;
-    border-radius: 15px;
-}
-
-/*config das fotos em slides*/
-.galeria::-webkit-scrollbar 
-.slider::-webkit-scrollbar{
-  padding:3rem;
-  background: #99928c;
-  display: none;
-}
-
-.slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 30rem;
-  padding: 3rem;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* melhora no celular */
-}
-
-
-.slider img {
-  width: 50%; /* ajuste conforme preferir */
-  height: auto;
-  background-size: cover;
-  background-position: center;
-  flex-shrink:0;
-  scroll-snap-align: center;
-  border-radius: 1rem;
-}
-
-.texto_centralizado{
-    text-align: center;
-
-}
-
-.tamanho_font{
-    font-family: Roboto, sans-serif;
-    font-size: 1.5em;
-}
-
-
-
-/* ====== HERO SECTION ====== 
-.hero {
-  background: url('fundo.jpg') center center/cover no-repeat;
-  height: -2vh; /* altura total da tela 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Caixa branca translúcida 
-.overlay-box {
-  background: rgba(197, 196, 196, 0.774); /* cor + transparência 
-  border-radius: 30px;
-  text-align: center;
-  max-width: 650px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-  margin: 2rem;
-}
-
-.overlay-box p {
-  color: #555;
-  line-height: 1.6;
-} */
-
-/* Ajuste de layout do restante da página */
-section {
-  padding: 10px 5px;
-}
-
-
-.fa-instagram {
-  color: #E4405F; /* cor oficial do Instagram */
-  font-size: 60px;
-  margin-right: 30px;
-}
-
-.fa-whatsapp{
-  color: #25d366;
-  font-size: 60px;
-  margin-right: 30px;
-}
-
-
 
 /* config da barra do topo  */
 .topo {
     width: 100%;
-    background-color:black;
+    background-color:gray;
     color:black ;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 4rem; /* diminui padding lateral */
+    padding: 15rem rem; /* diminui padding lateral */
     position: fixed;
     top: 0;
     left: 0;
@@ -140,14 +24,15 @@ section {
 }
 
 .logo img {
-    height: 2.9rem;
+    height: 5rem;
     width: auto;
     top: auto;
+    z-index: index 1000;
 }
 
 /* config do Menu */
 .menu a {
-    color: white;
+    color: black;
     text-decoration: none;
     margin-left: 5rem;
     font-weight: 500;
@@ -163,42 +48,51 @@ section {
   display: none;
   font-size: 2rem;
   cursor: pointer;
-  color: white;
+  color:black;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-  .topo {
-    padding: 1rem 2rem;
-  }
-
-  .menu {
-    display: none; /* esconde o menu normal */
-    flex-direction: column;
-    background-color: black;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-  }
-
-  .menu a {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .menu.ativo {
-    display: flex; /* mostra o menu quando ativo */
-  }
-
-  .menu-icon {
-    display: block; /* mostra o ícone no celular */
-  }
+/* Remove margens e espaçamentos padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Adiciona espaço no corpo pra não ficar escondido atrás do header*/
-body {
-    padding-top: 100px; /* altura equivalente à barra */
+/* Remove qualquer sobra de espaço e rolagem */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: black; /* opcional, pra eliminar qualquer branco visível */
+}
+
+/* Container do carrossel */
+.carrossel {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Imagens do carrossel */
+.carrossel img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block; /* remove espaçamento de linha entre imagens */
+}
+
+.fa-instagram {
+  color: #E4405F; /* cor oficial do Instagram */
+  font-size: 60px;
+  margin-right: 30px;
+}
+
+.fa-whatsapp{
+  color: #25d366;
+  font-size: 60px;
+  margin-right: 30px;
 }
