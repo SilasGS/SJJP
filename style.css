@@ -142,6 +142,7 @@ section {
 .logo img {
     height: 2.2rem;
     width: auto;
+    top: auto;
 }
 
 /* config do Menu */
