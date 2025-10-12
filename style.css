@@ -2,7 +2,7 @@
 /* config da barra do topo  */
 .topo {
     width: 100%;
-    background-color:gray;
+    background-color:white;
     color:black ;
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,6 @@
     align-items: center;
     font-size: 2rem;
     font-weight: bold;
-    gap: 10px; /* espaço entre texto e imagem */
 }
 
 .logo img {
@@ -70,10 +69,11 @@ html, body {
 
 /* Container do carrossel */
 .carrossel {
-  display: flex;
+  display:flex;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  margin-top:-55px;
 }
 
 /* Imagens do carrossel */
@@ -82,6 +82,7 @@ html, body {
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  margin: top 200px;
   display: block; /* remove espaçamento de linha entre imagens */
 }
 
