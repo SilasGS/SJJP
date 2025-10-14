@@ -17,7 +17,7 @@
 .topo .logo {
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: 6rem;
   font-weight: bold;
 }
 
@@ -36,7 +36,7 @@
 .menu a {
   color: black;
   text-decoration: none;
-  margin-left: 5rem;
+  margin-left:4rem;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -52,6 +52,23 @@
   cursor: pointer;
   color: black;
 }
+
+#pagina2{
+  background-color: rgb(0, 0, 0);
+  width:100%;
+  height:35rem;
+  
+}
+
+#pagina2 h2{
+  color: white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size:40px;
+  text-align: center;
+  margin-top:20px;
+}
+
+
 
 /* Remove margens e espaçamentos padrões */
 * {
@@ -72,35 +89,37 @@ html, body {
 
 /* Container do carrossel */
 .carrossel {
-  display:flex;
-  width: 100%;
-  height: 100vh;
+  display: flex;
   overflow: hidden;
-  margin-top:-55px;
+  margin-top: -55px;
+  transition: transform 1s ease;
+  width: max-content; /* se ajusta à quantidade de imagens */
+  height: 100vh; /* altura padrão para telas grandes */
 }
 
 /* Imagens do carrossel */
 .carrossel img {
   flex-shrink: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  display: block; /* remove espaçamento de linha entre imagens */
+  width: 100vw;  /* sempre ocupa toda a largura visível */
+  height: 100vh; /* altura cheia da tela no PC */
+  object-fit: cover; /* preenche sem distorcer */
+  display: block;
+}
+
+/* 🔹 Ajustes para telas menores (celulares) */
+@media (max-width: 768px) {
+  .carrossel {
+    height: 60vh; /* altura menor em celulares */
+  }
+
+  .carrossel img {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+  }
 }
 
 
-/* Ícones sociais */
-.fa-instagram {
-  color: #E4405F; /* cor oficial do Instagram */
-  font-size: 60px;
-  margin-right: 30px;
-}
-
-.fa-whatsapp{
-  color: #25d366;
-  font-size: 60px;
-  margin-right: 30px;
-}
 
 /* --------------- RESPONSIVO + ANIMAÇÃO SUAVE --------------- */
 /* Importante: mantemos o visual original em desktop e só alteramos mobile */
@@ -147,3 +166,18 @@ html, body {
     display: flex;
   }
 }
+
+
+/* Ícones sociais */
+.fa-instagram {
+  color: #E4405F; /* cor oficial do Instagram */
+  font-size: 60px;
+  margin-right: 30px;
+}
+
+.fa-whatsapp{
+  color: #25d366;
+  font-size: 60px;
+  margin-right: 30px;
+}
+
