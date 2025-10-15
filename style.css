@@ -53,6 +53,46 @@
   color: black;
 }
 
+#pagina1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 35vh; /* ocupa a tela toda */
+  
+  margin-top: -85px;
+}
+
+/* Container dos links */
+#link {
+  display: flex;
+  gap: 50px; /* espaço entre os botões */
+  flex-wrap: wrap; /* quebra linha no celular */
+  justify-content: center;
+}
+
+/* Imagens como botões */
+#link img {
+  width: 170px;       /* tamanho do botão */
+  height: 170px;      /* deixa quadrado */
+  border-radius: 50%; /* deixa redondo */
+  object-fit: cover;  /* ajusta a imagem */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito quando passa o mouse */
+#link img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  #link img {
+    width: 90px;
+    height: 90px;
+  }
+}
 #pagina2{
   background-color: rgb(0, 0, 0);
   width:100%;
@@ -66,14 +106,6 @@
   font-size:40px;
   text-align: center;
 }
-
-#link img{
-  width: 500px;
-  height: auto;
-  margin-top: -150px;
-}
-
-
 
 /* Remove margens e espaçamentos padrões */
 * {
