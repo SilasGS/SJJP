@@ -65,7 +65,12 @@
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size:40px;
   text-align: center;
-  margin-top:20px;
+}
+
+#link img{
+  width: 500px;
+  height: auto;
+  margin-top: -150px;
 }
 
 
