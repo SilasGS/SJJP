@@ -54,7 +54,7 @@
 }
 
 #pagina1 {
-  background-color: rgb(128, 128, 128);
+  background-color: rgb(224, 187, 112);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,8 +73,8 @@
 
 /* Imagens como botões */
 #link img {
-  width: 130px;       /* tamanho do botão */
-  height: 130px;      /* deixa quadrado */
+  width: 250px;       /* tamanho do botão */
+  height: 250px;      /* deixa quadrado */
   border-radius: 100%; /* deixa redondo */
   object-fit: cover;  /* ajusta a imagem */
   cursor: pointer;
@@ -194,7 +194,7 @@ html, body {
 .carrossel img {
   flex-shrink: 0;
   width: 100vw;  /* sempre ocupa toda a largura visível */
-  height: 100vh; /* altura cheia da tela no PC */
+  height: 90vh; /* altura cheia da tela no PC */
   object-fit: cover; /* preenche sem distorcer */
   display: block;
 }
