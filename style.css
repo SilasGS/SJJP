@@ -1,6 +1,6 @@
 /* Config da barra do topo */
 .topo {
-  width: 100%;
+  width: 99%;
   background-color: white;
   color: black;
   display: flex;
@@ -22,7 +22,7 @@
 }
 
 .logo img {
-  height: 6rem;
+  height: 5rem;
   width: auto;
   z-index: 1000;
 }
@@ -58,9 +58,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 25vh; /* ocupa a tela toda */
+  min-height: 10vh; /* ocupa a tela toda */
   
-  margin-top: -90px;
+  margin-top:-80px;
 }
 
 /* Container dos links */
@@ -73,8 +73,8 @@
 
 /* Imagens como botões */
 #link img {
-  width: 250px;       /* tamanho do botão */
-  height: 250px;      /* deixa quadrado */
+  width: 150px;       /* tamanho do botão */
+  height: 150px;      /* deixa quadrado */
   border-radius: 100%; /* deixa redondo */
   object-fit: cover;  /* ajusta a imagem */
   cursor: pointer;
@@ -95,9 +95,9 @@
   }
 }
 #pagina2 {
-  background-color: #ffffff;
+  background-color: #fff6e1;
   width: 100%;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 .conteudo {
@@ -111,8 +111,8 @@
 }
 
 #pagina2 img {
-  width: 400px; 
-  height: 400px;
+  width: 450px; 
+  height: 450px;
   object-fit: contain;        /* Mantém proporção */
 }
 
@@ -264,13 +264,13 @@ html, body {
 /* Ícones sociais */
 .fa-instagram {
   color: #E4405F; /* cor oficial do Instagram */
-  font-size: 60px;
-  margin-right: 30px;
+  font-size: 30px;
+  margin-right: 10px;
 }
 
 .fa-whatsapp{
   color: #25d366;
-  font-size: 60px;
-  margin-right: 30px;
+  font-size: 30px;
+  margin-right: 10px;
 }
 
