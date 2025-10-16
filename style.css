@@ -281,6 +281,11 @@ html, body {
   
 }
 
+#pagina3 h2{
+  font-size: 30px;
+  text-align: center;
+}
+
 /* Área principal do formulário */
 #pagina3 form {
   max-width: 400px;
@@ -298,6 +303,7 @@ html, body {
 #pagina3 form h2 {
   color: #333;
   margin-bottom: 20px;
+  
 }
 
 /* Campos de entrada */
