@@ -1,3 +1,7 @@
+.body{
+  padding-top: 280px;
+}
+
 /* Config da barra do topo */
 .topo {
   width: 99%;
@@ -58,34 +62,60 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 10vh; /* ocupa a tela toda */
-  
-  margin-top:-80px;
+  padding: 20px 10px; /* margem interna confortável */
+  box-sizing: border-box;
+  flex-direction: column;
+  margin-top: 0;
+  padding-top: 0;
+
 }
 
-/* Container dos links */
+
 #link {
   display: flex;
-  gap: 50px; /* espaço entre os botões */
-  flex-wrap: wrap; /* quebra linha no celular */
+  gap: 30px;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
-/* Imagens como botões */
 #link img {
-  width: 150px;       /* tamanho do botão */
-  height: 150px;      /* deixa quadrado */
-  border-radius: 100%; /* deixa redondo */
-  object-fit: cover;  /* ajusta a imagem */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efeito quando passa o mouse */
 #link img:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  #link img {
+    width: 90px;
+    height: 90px;
+  }
+
+  #link {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #link img {
+    width: 70px;
+    height: 70px;
+  }
+
+  #link {
+    gap: 15px;
+  }
+}
+
 
 /* Responsividade */
 @media (max-width: 600px) {
