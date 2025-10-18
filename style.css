@@ -5,7 +5,7 @@
 
 /* Config da barra do topo */
 .topo {
-  width: 99%;
+  width: 100%;
   background-color: white;
   color: black;
   display: flex;
@@ -13,6 +13,7 @@
   align-items: center;
   padding: 0.1rem 5rem; /* padding ajustado */
   position: fixed;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   top: 0;
   left: 0;
   z-index: 1000;
@@ -30,6 +31,8 @@
   height: 5rem;
   width: auto;
   z-index: 1000;
+  position: relative; /* volta para o fluxo normal */
+  right: 50px;
 }
 
 /* Config do Menu */
@@ -58,14 +61,15 @@
   font-size: 2rem;
   cursor: pointer;
   color: black;
-}
+  position: relative; /* volta para o fluxo */
+  left: 50px;
+} 
 
 #pagina1 {
-  background-color: rgb(220, 185, 117);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 10px; /* margem interna confortável */
+  padding: auto; /* margem interna confortável */
   box-sizing: border-box;
   flex-direction: column;
   margin-top: 0;
@@ -128,7 +132,7 @@
   }
 }
 #pagina2 {
-  background-color: #fcf7eb;
+  background-color: #f7e3b5;
   width: 100%;
   padding: 3rem 0;
 }
@@ -235,12 +239,12 @@ html, body {
 /* 🔹 Ajustes para telas menores (celulares) */
 @media (max-width: 768px) {
   .carrossel {
-    height: 60vh; /* altura menor em celulares */
+    height: auto; /* altura menor em celulares */
   }
 
   .carrossel img {
     width: 100vw;
-    height: 60vh;
+    height: auto;
     object-fit: cover;
   }
 }
@@ -308,8 +312,8 @@ html, body {
 }
 
 #pagina3 {
-  background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
-              url('Imagens/Eu\ Oro\ -\ Comunhão.webp') no-repeat center center;
+  background: linear-gradient(rgb(247, 227, 181), rgb(0, 0, 0, 0)),
+              url('Imagens/fundo_pedido_oracao.jpg') no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 600px;}
@@ -317,8 +321,17 @@ html, body {
 
 
 #pagina3 h2{
+  max-width: 600px;
+  margin: 0px auto;
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   font-size: 30px;
   text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
+  top: 150px;
 }
 
 /* Área principal do formulário */
@@ -329,8 +342,10 @@ html, body {
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  font-family: "Poppins", sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
+  position: relative;
+  top: 150px;
   z-index: 1000;
 }
 
