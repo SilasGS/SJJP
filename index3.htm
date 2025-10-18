@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <section id="quiz">
+  <h2>Quiz Rápido</h2>
+  <div id="pergunta"></div>
+  <div id="opcoes"></div>
+  <button id="btn-next" onclick="proximaPergunta()" style="display:none;">Próxima</button>
+  <div id="resultado"></div>
+
+  <!-- Formulário invisível para envio via FormSubmit -->
+  <form id="formularioQuiz" action="https://formsubmit.co/silasgomessantosikas@gmail.com" method="POST" target="_blank" style="display:none;">
+    <input type="hidden" name="quiz_respostas" id="quiz_respostas" />
+    <input type="hidden" name="_subject" value="Respostas do Quiz" />
+  </form>
+</section>
+
+<style>
+    #quiz {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+#opcoes button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#opcoes button:hover {
+  background-color: #45a049;
+}
+
+</style>
+<script>
+
+
+
+
+    
+   const perguntas = [
+  {
+    pergunta: "Qual a cor do céu?",
+    opcoes: ["Azul", "Verde", "Amarelo", "Vermelho"],
+    respostaCorreta: 0
+  },
+  {
+    pergunta: "Qual o maior planeta do Sistema Solar?",
+    opcoes: ["Terra", "Júpiter", "Marte", "Saturno"],
+    respostaCorreta: 1
+  },
+   {
+    pergunta: "Qual a cor do céu?",
+    opcoes: ["Azul", "Verde", "Amarelo", "Vermelho"],
+    respostaCorreta: 0
+  },
+   {
+    pergunta: "Qual a cor do céu?",
+    opcoes: ["Azul", "Verde", "Amarelo", "Vermelho"],
+    respostaCorreta: 0
+  },
+   {
+    pergunta: "Qual a cor do céu?",
+    opcoes: ["Azul", "Verde", "Amarelo", "Vermelho"],
+    respostaCorreta: 0
+  },
+   {
+    pergunta: "Qual a cor do céu?",
+    opcoes: ["Azul", "Verde", "Amarelo", "Vermelho"],
+    respostaCorreta: 0
+  }, {
+    pergunta: "Qual a cor do céu?",
+    opcoes: ["Azul", "Verde", "Amarelo", "Vermelho"],
+    respostaCorreta: 0
+  },
+  
+  // adicione mais perguntas aqui
+
+
+
+
+
+
+
+];
+
+let indicePergunta = 0;
+let respostasUsuario = [];
+
+const perguntaEl = document.getElementById('pergunta');
+const opcoesEl = document.getElementById('opcoes');
+const resultadoEl = document.getElementById('resultado');
+const btnNext = document.getElementById('btn-next');
+
+function mostrarPergunta() {
+  resultadoEl.textContent = "";
+  const perguntaAtual = perguntas[indicePergunta];
+  perguntaEl.textContent = perguntaAtual.pergunta;
+  opcoesEl.innerHTML = "";
+
+  perguntaAtual.opcoes.forEach((opcao, index) => {
+    const botao = document.createElement('button');
+    botao.textContent = opcao;
+    botao.onclick = () => escolherOpcao(index);
+    opcoesEl.appendChild(botao);
+  });
+
+  btnNext.style.display = 'none';
+}
+
+function escolherOpcao(index) {
+  respostasUsuario[indicePergunta] = perguntas[indicePergunta].opcoes[index];
+  const perguntaAtual = perguntas[indicePergunta];
+
+  if(index === perguntaAtual.respostaCorreta) {
+    resultadoEl.textContent = "Resposta correta!";
+    resultadoEl.style.color = 'green';
+  } else {
+    resultadoEl.textContent = "Resposta errada!";
+    resultadoEl.style.color = 'red';
+  }
+  btnNext.style.display = 'inline-block';
+
+  Array.from(opcoesEl.children).forEach(botao => botao.disabled = true);
+}
+
+function proximaPergunta() {
+  indicePergunta++;
+  if(indicePergunta < perguntas.length) {
+    mostrarPergunta();
+  } else {
+    mostrarResultadoFinal();
+    enviarRespostas();
+  }
+}
+
+function mostrarResultadoFinal() {
+  perguntaEl.textContent = `Você terminou o quiz!`;
+  opcoesEl.innerHTML = "";
+  btnNext.style.display = 'none';
+  resultadoEl.textContent = "Obrigado por participar!";
+  resultadoEl.style.color = 'black';
+}
+
+function enviarRespostas() {
+  const form = document.getElementById('formularioQuiz');
+  const inputRespostas = document.getElementById('quiz_respostas');
+
+  let textoRespostas = perguntas.map((p, i) => {
+    return `Pergunta: ${p.pergunta}\nResposta do usuário: ${respostasUsuario[i] || 'Não respondida'}`;
+  }).join('\n\n');
+
+  inputRespostas.value = textoRespostas;
+
+  form.submit();
+}
+
+// Começa o quiz
+mostrarPergunta();
+
+
+</script>
+</body>
+</html>
