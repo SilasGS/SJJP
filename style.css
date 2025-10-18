@@ -1,5 +1,6 @@
 .body{
   padding-top: 280px;
+
 }
 
 /* Config da barra do topo */
@@ -41,7 +42,9 @@
   color: black;
   text-decoration: none;
   margin-left:4rem;
-  font-weight: 500;
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
   transition: color 0.3s;
 }
 
@@ -62,7 +65,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 10px; /* margem interna confortável */
+  padding: 0px 10px; /* margem interna confortável */
   box-sizing: border-box;
   flex-direction: column;
   margin-top: 0;
@@ -89,8 +92,8 @@
 }
 
 #link img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: scale(0.9);
+  box-shadow: 0px 2px 50px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsividade */
@@ -214,17 +217,17 @@ html, body {
 .carrossel {
   display: flex;
   overflow: hidden;
-  margin-top: -55px;
+  margin-top: 80px;
   transition: transform 1s ease;
   width: max-content; /* se ajusta à quantidade de imagens */
-  height: 100vh; /* altura padrão para telas grandes */
+  height: auto; /* altura padrão para telas grandes */
 }
 
 /* Imagens do carrossel */
 .carrossel img {
   flex-shrink: 0;
   width: 100vw;  /* sempre ocupa toda a largura visível */
-  height: 90vh; /* altura cheia da tela no PC */
+  height: auto; /* altura cheia da tela no PC */
   object-fit: cover; /* preenche sem distorcer */
   display: block;
 }
