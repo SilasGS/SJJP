@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesquisa de Estudo Bíblico</title>
+  <style>
+    /* Fundo com imagem suave */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1602810318383-e386cc2a3ec2?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      backdrop-filter: brightness(0.8);
+    }
+
+    /* Caixa do formulário */
+    form {
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      width: 90%;
+      max-width: 480px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #2e4a25;
+      margin-bottom: 10px;
+    }
+
+    p.versiculo {
+      text-align: center;
+      font-style: italic;
+      color: #4a4a4a;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #2e2e2e;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #3e8e41;
+      outline: none;
+      box-shadow: 0 0 5px rgba(62,142,65,0.5);
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      background-color: #3e8e41;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #347a37;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 15px;
+      color: #333;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://formsubmit.co/silasgomessantosikas@gmail.com" method="POST">
+    <h2>Pesquisa de Estudo Bíblico</h2>
+    <p class="versiculo">“Examinai as Escrituras, porque julgais ter nelas a vida eterna.” — João 5:39 📖</p>
+
+    <label for="nome">Nome completo:</label>
+    <input type="text" id="nome" name="Nome" required>
+
+    <label for="numero">Número (WhatsApp):</label>
+    <input type="tel" id="numero" name="Número" placeholder="(DDD) 90000-0000" required>
+
+    <label>Você já participou de algum estudo bíblico antes?</label>
+    <select name="Estudo anterior" required>
+      <option value="">Selecione</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+
+    <label>Já foi Adventista?</label>
+    <select name="Ex membro" required>
+      <option value="">Selecione</option>
+      <option value="Sim">Sim</option>
+      <option value="Não">Não</option>
+    </select>
+
+    <label>Qual o seu nivel de conhecimento Biblico ?</label>
+    <select name="Conhecimento biblico" required>
+      <option value="">Selecione</option>
+      <option value="Alto">Alto</option>
+      <option value="Medio">Medio</option>
+      <option value="Baixo">Baixo</option>
+    </select>
+
+    <label>Qual tema bíblico você gostaria de aprender mais?</label>
+    <textarea name="Tema de interesse" rows="3" placeholder="Ex: fé, milagres, amor, profecias..." required></textarea>
+
+    <label>Você gostaria de receber visitas ou mensagens com estudos semanais?</label>
+    <select name="Receber estudos" required>
+      <option value="">Selecione</option>
+      <option value="Sim, gostaria!">Sim, gostaria!</option>
+      <option value="Talvez mais tarde">Talvez mais tarde</option>
+      <option value="Não">Não</option>
+    </select>
+
+    <!-- Configurações extras do FormSubmit -->
+    <input type="hidden" name="_subject" value="Nova resposta - Pesquisa Bíblica">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://google.com">
+
+    <button type="submit">Enviar respostas</button>
+
+    <footer>
+      Obrigado por participar! Que Deus abençoe seu estudo 
+    </footer>
+  </form>
+
+</body>
+</html>
