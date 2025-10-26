@@ -398,73 +398,144 @@ html, body {
 
 /*pagina do clube*/
 
-#pag1{
+/* Fundo da seção principal */
+#pag1 {
   background-color: black;
+  min-height: 100vh; /* ocupa a tela toda */
+  padding: 40px 20px;
 }
 
-.dbv.html{
+/* Seção dbv */
+.dbv {
   background-color: black;
+  text-align: center;
+  padding: 20px;
 }
 
-.dbv img{
+/* Imagem centralizada */
+.dbv img {
   display: block;
   margin: 0 auto;
-
+  max-width: 90%; /* evita que ultrapasse a tela */
+  height: auto;
+  border-radius: 10px; /* opcional, só pra ficar mais bonito */
 }
 
-.dbv h2{
-  text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* Título */
+.dbv h2 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 40px;
   color: darkgoldenrod;
+  margin-top: 20px;
 }
 
-.dbv p{
-   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* Parágrafo */
+.dbv p {
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-top: 30px;
   color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 📱 Responsividade */
+@media (max-width: 1024px) {
+  .dbv h2 {
+    font-size: 32px;
+  }
+
+  .dbv p {
+    font-size: 17px;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dbv h2 {
+    font-size: 28px;
+  }
+
+  .dbv p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #pag1 {
+    padding: 20px 10px;
+  }
+
+  .dbv img {
+    max-width: 100%;
+  }
+
+  .dbv h2 {
+    font-size: 24px;
+  }
+
+  .dbv p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
 }
 
 /* Fundo da seção */
 #pag2 {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   color: white;
-  min-height: 100vh;           /* ocupa a tela toda */
-  display: flex;               
-  justify-content: center;     /* centraliza na horizontal */
-  align-items: center;         /* centraliza na vertical */
-  flex-direction: column;      
-  padding: 40px 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
 }
 
-/* Centraliza o conteúdo interno */
+/* Centraliza o conteúdo */
 .conteudo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-/* Ajuste do iframe (formulário) */
+/* Título */
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00ff88;
+}
+
+/* Formulário (iframe) */
 #pag2 iframe {
+  width: 100%;
+  max-width: 640px;  /* limite máximo para desktops */
+  height: 80vh;      /* altura proporcional à tela */
   border-radius: 10px;
   border: 2px solid #222;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-  max-width: 90%;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
 }
 
 /* Botões sociais */
 .botoes {
   margin-top: 30px;
   display: flex;
-  gap: 40px; /* espaçamento entre os ícones */
+  gap: 40px;
   justify-content: center;
+  flex-wrap: wrap; /* quebra linha se faltar espaço */
 }
 
-/* Estilo dos links (ícones) */
+/* Ícones */
 .botoes a {
   font-size: 40px;
-  color: white;
+  color: rgb(9, 0, 0);
   transition: 0.3s;
 }
 
@@ -472,4 +543,49 @@ html, body {
 .botoes a:hover {
   color: #00ff88; /* cor de destaque (pode trocar) */
   transform: scale(1.2);
+}
+
+.botoes a:nth-child(1):hover {
+  color: #E4405F; /* Instagram */
+}
+
+.botoes a:nth-child(2):hover {
+  color: #25D366; /* WhatsApp */
+}
+
+/* 📱 Responsividade */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 1.6rem;
+  }
+
+  #pag2 iframe {
+    height: 75vh;
+  }
+
+  .botoes a {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  #pag2 {
+    padding: 20px 10px;
+  }
+
+  .titulo {
+    font-size: 1.4rem;
+  }
+
+  #pag2 iframe {
+    height: 70vh;
+  }
+
+  .botoes {
+    gap: 25px;
+  }
+
+  .botoes a {
+    font-size: 30px;
+  }
 }
