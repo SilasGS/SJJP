@@ -316,11 +316,17 @@ html, body {
               url('Imagens/fundo_pedido_oracao.jpg') no-repeat center center;
   background-size: cover;
   width: 100%;
-  height: 600px;}
+  height: 600px;
 
+  /* 👇 Adicionado para centralizar conteúdo */
+  display: flex;
+  flex-direction: column; /* mantém o h2 em cima e o iframe embaixo */
+  align-items: center;    /* centraliza horizontalmente */
+  justify-content: flex-start; /* mantém tudo alinhado no topo */
+  gap: 30px; /* espaço entre o título e o iframe */
+}
 
-
-#pagina3 h2{
+#pagina3 h2 {
   max-width: 600px;
   margin: 0px auto;
   background: #f9f9f9;
@@ -331,67 +337,21 @@ html, body {
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   position: relative;
-  top: 150px;
+  top: 60px; /* 🔹 Reduzi o deslocamento pra combinar com o flexbox */
 }
 
 /* Área principal do formulário */
-#pagina3 form {
-  max-width: 400px;
-  margin: 60px auto;
-  background: #f9f9f9;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: center;
-  position: relative;
-  top: 150px;
-  z-index: 1000;
-}
-
-/* Título */
-#pagina3 form h2 {
-  color: #333;
-  margin-bottom: 20px;
-  
-}
-
-/* Campos de entrada */
-#pagina3 form input,
-#pagina3 form  textarea {
+#pagina3 iframe {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  outline: none;
-  font-size: 15px;
-  transition: 0.3s;
-}
+  max-width: 453px;  /* limite máximo para desktops */
+  height: 60vh;      /* altura proporcional à tela */
+  border-radius: 10px;
+  border: 2px solid #222;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+  margin-top: 50px;
 
-/* Efeito ao focar */
-#pagina3 form  input:focus,
-#pagina3 form  textarea:focus {
-  border-color: #4CAF50;
-  box-shadow: 0 0 5px #4CAF50;
-}
-
-/* Botão */
-#pagina3 form  button {
-  background: #4CAF50;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-/* Efeito hover */
-#pagina3 form  button:hover {
-  background: #45a049;
-  transform: scale(1.05);
+  /* 👇 Garante que o iframe respeite o alinhamento central */
+  display: block;
 }
 
 
